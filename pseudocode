@@ -1,0 +1,7 @@
+Make axios request to github API
+initialize variables that represent data from github API
+initialize HTML variable = HTML structure that the github data will be plugged into
+
+make file (fs) and save HTML variable to 'htmlstructure.html' 
+THEN
+run PDF generator function using htmlstructure.html

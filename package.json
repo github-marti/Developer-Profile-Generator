@@ -1,0 +1,25 @@
+{
+  "name": "developer-profile-generator",
+  "version": "1.0.0",
+  "description": "creates a custom developer profile PDF based on the given github username",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github-marti/Developer-Profile-Generator.git"
+  },
+  "author": "Marti McElreath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/github-marti/Developer-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/github-marti/Developer-Profile-Generator#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "electron": "^6.0.11",
+    "electron-html-to": "^2.6.0",
+    "inquirer": "^7.0.0"
+  }
+}
