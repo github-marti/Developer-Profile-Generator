@@ -9,7 +9,7 @@ inquirer.prompt([{
     name: "username"
   },
   {
-    message: "Choose a background color for your profile",
+    message: "Choose a color theme for your profile",
     type: "list",
     choices: ["wine red", "forest green", "sky blue", "mustard yellow", "almost black"],
     name: "color"
