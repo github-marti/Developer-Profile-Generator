@@ -1,5 +1,4 @@
 const fs = require('fs');
-const util = require('util');
 const convertFactory = require('electron-html-to');
 const axios = require('axios');
 const inquirer = require('inquirer');
@@ -66,9 +65,6 @@ inquirer.prompt([{
     ])
     .then(axios.spread((response, response2) => {
 
-      // console.log(response +'\n\n');
-      // console.log(response2.data[0]);
-
       let starCount = 0;
 
       for (let i = 0; i < response2.data.length; i++) {
@@ -80,7 +76,7 @@ inquirer.prompt([{
       const userBio = response.data.bio;
       const userCompany = response.data.company;
       const userLocation = response.data.location;
-      const userEmail = response.data.email;
+      const userBlog = response.data.blog;
       const publicRepos = response.data.public_repos;
       const followers = response.data.followers;
       const following = response.data.following;
@@ -89,7 +85,7 @@ inquirer.prompt([{
       
       `<!DOCTYPE html>
       <head>
-          <script src="https://kit.fontawesome.com/4a3eda80d3.js" crossorigin="anonymous"></script>
+    
           <style>
           * {
               box-sizing: border-box;
@@ -192,9 +188,9 @@ inquirer.prompt([{
           <div class="floating-header">
               <h1 id="user-name">${fullName}</h1>
               <h3>Currently at <span id="business">${userCompany}</span></h3>
-              <a id="location" href="https://www.google.com/maps/place/${userLocation}"><i class="fas fa-location-arrow"></i> Location</a>
-              <a id="github" href="https://github.com/${username}"><i class="fab fa-github"></i> GitHub</a>
-              <a id="blog" href="mailto:${userEmail}"><i class="fas fa-blog"></i> E-mail</a>
+              <a id="location" href="https://www.google.com/maps/place/${userLocation}">Location</a>
+              <a id="github" href="https://github.com/${username}">GitHub</a>
+              <a id="blog" href="${userBlog}">Blog</a>
           </div>
           <div class="middle-bg">
               <div>
