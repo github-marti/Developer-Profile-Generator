@@ -220,6 +220,7 @@ inquirer.prompt([{
       </body>
       </html>`;
       
+      // using electron to convert HTML template above into PDF file
       const conversion = convertFactory({
         converterPath: convertFactory.converters.PDF,
         allowLocalFilesAccess: true,
