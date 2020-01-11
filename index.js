@@ -78,6 +78,8 @@ inquirer.prompt([{
       const followers = response.data.followers;
       const following = response.data.following;
 
+      console.log(userBlog);
+
       const HTML = 
       
       `<!DOCTYPE html>
@@ -187,7 +189,7 @@ inquirer.prompt([{
               <h3>Currently at <span id="business">${userCompany}</span></h3>
               <a id="location" href="https://www.google.com/maps/place/${userLocation}">Location</a>
               <a id="github" href="https://github.com/${username}">GitHub</a>
-              <a id="blog" href="${userBlog}">Blog</a>
+              <a id="blog" href="${userBlog}">Website</a>
           </div>
           <div class="middle-bg">
               <div>
