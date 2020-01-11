@@ -4,7 +4,7 @@ const axios = require('axios');
 const inquirer = require('inquirer');
 
 inquirer.prompt([{
-    message: "Enter your GitHub username",
+    message: "Enter the GitHub user you would like to make a profile for",
     name: "username"
   },
   {
