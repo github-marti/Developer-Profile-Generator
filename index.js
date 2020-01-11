@@ -83,8 +83,6 @@ inquirer.prompt([{
       const followers = response.data.followers;
       const following = response.data.following;
 
-      console.log(userBlog);
-
       const HTML = 
       
       `<!DOCTYPE html>
