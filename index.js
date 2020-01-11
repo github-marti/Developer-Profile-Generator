@@ -11,7 +11,7 @@ inquirer.prompt([{
     message: "Choose a color theme for your profile",
     type: "list",
     choices: ["wine red", "forest green", "sky blue", "mustard yellow", "almost black"],
-    name: "color"
+    name: "colorChoice"
   }])
 
   .then(function({username, colorChoice}) {
@@ -77,6 +77,8 @@ inquirer.prompt([{
       const publicRepos = response.data.public_repos;
       const followers = response.data.followers;
       const following = response.data.following;
+
+      console.log(bgColor, contentColor, cardColor);
 
       const HTML = 
       
