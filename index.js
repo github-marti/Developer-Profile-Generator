@@ -234,7 +234,7 @@ inquirer.prompt([{
           return console.error(err);
         }
       
-        result.stream.pipe(fs.createWriteStream(`./pdf/${username}-profile.pdf`));
+        result.stream.pipe(fs.createWriteStream(`./pdf/almost-black-profile.pdf`));
         conversion.kill();
         });
 
