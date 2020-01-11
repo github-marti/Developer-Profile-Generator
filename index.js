@@ -14,11 +14,11 @@ inquirer.prompt([{
     name: "color"
   }])
 
-  .then(function(results) {
+  .then(function({username, colorChoice}) {
 
     console.log(results);
-    const username = results.username;
-    const colorChoice = results.color;
+    // const username = results.username;
+    // const colorChoice = results.color;
     let bgColor,
         contentColor,
         cardColor;
