@@ -67,10 +67,12 @@ inquirer.prompt([{
 
       let starCount = 0;
 
+      // counting through the watchers count for all of the repos to sum star count
       for (let i = 0; i < response2.data.length; i++) {
         starCount += response2.data[i]['watchers_count'];
       }
 
+      // initializing all of the data as variables for easier access in HTML template
       const avatarURL = response.data.avatar_url;
       const fullName = response.data.name;
       const userBio = response.data.bio;
