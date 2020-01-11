@@ -16,9 +16,6 @@ inquirer.prompt([{
 
   .then(function({username, colorChoice}) {
 
-    console.log(results);
-    // const username = results.username;
-    // const colorChoice = results.color;
     let bgColor,
         contentColor,
         cardColor;
@@ -232,7 +229,7 @@ inquirer.prompt([{
           return console.error(err);
         }
       
-        result.stream.pipe(fs.createWriteStream('./pdf/test.pdf'));
+        result.stream.pipe(fs.createWriteStream('./pdf/developer-profile.pdf'));
         conversion.kill();
         });
 
