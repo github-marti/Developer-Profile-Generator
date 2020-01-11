@@ -16,10 +16,12 @@ inquirer.prompt([{
 
   .then(function({username, colorChoice}) {
 
+    // declaring variables to customize PDF based on user input
     let bgColor,
         contentColor,
         cardColor;
 
+    // switch statement that sets the variables to colors based on user input
     switch (colorChoice) {
       case "wine red":
         bgColor = "#6e0010";
@@ -55,7 +57,8 @@ inquirer.prompt([{
     const queryUrl1 = `https://api.github.com/users/${username}`;
     const queryUrl2 = `https://api.github.com/users/${username}/repos?per_page=100`;
 
-    //axios request
+    // axios requests, star count comes from a separate axios request than
+    // the rest of the data so two calls must be made
     axios.all([
       axios.get(queryUrl1),
       axios.get(queryUrl2)
