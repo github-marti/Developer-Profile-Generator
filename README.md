@@ -4,4 +4,4 @@ Easy-to-use CLI that allows users to create a developer profile by answering a f
 
 # Languages
 
-NodeJS
+NodeJS, HTML, CSS
